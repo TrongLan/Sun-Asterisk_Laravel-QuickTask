@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Post;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +17,27 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/user', function ()
+{
+    $user = User::create([
+        'first_name' => "Trong Lan",
+        'last_name' => "Dinh",
+        'email' => "alandin0812@gmail.com",
+        'password' => "12345678",
+    ]);
+
+    dd(User::all());
+});
+
+Route::get('/post', function ()
+{
+    $user = Post::create([
+        'title' => "This is title 2",
+        'content' => "This is content 2",
+        'user_id' => 1,
+    ]);
+
+    dd(Post::all());
 });
