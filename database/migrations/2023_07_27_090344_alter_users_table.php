@@ -26,6 +26,14 @@ return new class extends Migration
      */
     public function down(): void
     {
+<<<<<<< HEAD
         //
+=======
+        $table->string('name');
+        $table->dropColumn('first_name');
+        $table->dropColumn('last_name');
+        $table->dropColumn('is_admin');
+        $table->dropColumn('is_active');
+>>>>>>> 434de6957c01c5f3c603702e82fb5682968ffa75
     }
 };
