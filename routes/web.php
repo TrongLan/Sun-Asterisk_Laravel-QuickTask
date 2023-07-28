@@ -27,8 +27,6 @@ Route::get('/user', function ()
         'email' => "alandin0812@gmail.com",
         'password' => "12345678",
     ]);
-
-    dd(User::all());
 });
 
 Route::get('/post', function ()
@@ -38,6 +36,4 @@ Route::get('/post', function ()
         'content' => "This is content 2",
         'user_id' => 1,
     ]);
-
-    dd(Post::all());
 });
